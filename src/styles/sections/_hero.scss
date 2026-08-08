@@ -1,0 +1,25 @@
+.hero {
+  padding-block: clamp(7rem, 5rem + 8vw, 11rem) clamp(3rem, 2rem + 4vw, 6rem);
+  text-align: center;
+}
+
+.hero__title {
+  max-width: 65rem;
+  margin-inline: auto;
+}
+
+.hero__accent {
+  color: var(--color-accent)
+}
+
+.hero__lead {
+  max-width: 38rem;
+  margin: 1.5rem auto 0;
+  font-size: var(--fs-body);
+  color: var(--color-text);
+}
+
+
+
+
+
