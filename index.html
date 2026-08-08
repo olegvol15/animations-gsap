@@ -4,10 +4,106 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>animations-task</title>
+    <title>Urbi — geo-platform</title>
   </head>
   <body>
-    <div id="app"></div>
+    <!-- fixed: живёт снаружи #smooth-wrapper -->
+    <header class="header" data-header>
+      <div class="header__inner">
+        <a class="header__logo" href="#">urbi</a>
+
+        <nav class="header__nav" id="primary-nav" data-nav>
+          <ul class="header__list">
+            <li><a class="header__link" href="#">Products</a></li>
+            <li><a class="header__link" href="#">Case studies</a></li>
+            <li><a class="header__link" href="#">Urbi Atlas</a></li>
+            <li><a class="header__link" href="#">Customers</a></li>
+          </ul>
+          <a class="btn btn--pill header__cta" href="#">Contact us</a>
+        </nav>
+
+        <button
+          class="burger"
+          type="button"
+          aria-label="Open menu"
+          aria-expanded="false"
+          aria-controls="primary-nav"
+          data-burger
+        >
+          <span class="burger__line"></span>
+          <span class="burger__line"></span>
+        </button>
+      </div>
+    </header>
+
+    <div id="smooth-wrapper">
+      <div id="smooth-content">
+        <main>
+          <section class="hero">
+            <div class="container">
+              <h1 class="hero__title">
+                Urbi empowers <span class="hero__accent">governments, businesses, and residents</span>
+                with the most accurate and up-to-date spatial data, enabling smarter
+                decisions and efficient solutions for every urban challenge.
+              </h1>
+              <p class="hero__lead">
+                Urbi is a cutting-edge geo-platform that integrates all the necessary
+                data, algorithms, and tools to address your challenges in mapping,
+                navigation, and spatial analysis.
+              </p>
+            </div>
+          </section>
+
+          <section class="panel" data-panel>
+            <div class="panel__bg" data-panel-bg></div>
+
+            <div class="container panel__inner">
+              <h2 class="panel__title">How we can help?</h2>
+
+              <ul class="cards">
+                <li class="card" data-card>
+                  <div class="card__media"></div>
+                  <h3 class="card__title">Adapt navigation to the future</h3>
+                  <p class="card__text">
+                    Mobility efficiency is crucial. Make your city more accessible and
+                    efficient with real-time traffic updates, dynamic routing for all
+                    modes of transportation, and foreseen navigation adaptations to
+                    welcome innovation.
+                  </p>
+                </li>
+
+                <li class="card" data-card>
+                  <div class="card__media"></div>
+                  <h3 class="card__title">Specialized expertise in geo-data</h3>
+                  <p class="card__text">
+                    We provide a flexible and user-friendly platform for accessing
+                    insights and making informed decisions at the local, city,
+                    national, and global levels.
+                  </p>
+                </li>
+
+                <li class="card" data-card>
+                  <div class="card__media"></div>
+                  <h3 class="card__title">Secure your resources in times of crisis</h3>
+                  <p class="card__text">
+                    Respond quickly and effectively to emergencies with Urbi's
+                    real-time data and spatial analysis with Urbi Pro.
+                  </p>
+                </li>
+              </ul>
+            </div>
+          </section>
+
+          <section class="outro">
+            <div class="container">
+              <h2>Next section</h2>
+              <p>Placeholder so the panel has something to scroll into.</p>
+            </div>
+          </section>
+        </main>
+      </div>
+    </div>
+
     <script type="module" src="/src/main.js"></script>
   </body>
 </html>

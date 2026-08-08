@@ -1,0 +1,83 @@
+:root {
+  /* Fonts */
+  --font-sans: 'Inter Variable', 'Inter', system-ui, -apple-system, sans-serif;
+
+  /* Colors — light surface */
+  --color-bg: #f4f3f8;
+  --color-heading: #2a1259;
+  --color-text: #6b6375;
+
+  /* Colors — dark panel */
+  --color-panel-top: #2b1a63;
+  --color-panel-bottom: #4b34c4;
+  --color-on-dark: #fff;
+  --color-on-dark-muted: rgba(255, 255, 255, 0.72);
+  --color-border-on-dark: rgba(255, 255, 255, 0.14);
+
+  /* Colors — accent */
+  --color-accent: #f2c14b;
+
+  /* Type scale */
+  --fs-h1: clamp(1.75rem, 1rem + 3.4vw, 4rem);
+  --fs-h2: clamp(1.5rem, 0.9rem + 2.6vw, 3rem);
+  --fs-h3: clamp(1.125rem, 0.95rem + 0.8vw, 1.5rem);
+  --fs-body: clamp(0.9375rem, 0.88rem + 0.3vw, 1.125rem);
+  --fs-small: 0.875rem;
+
+  --lh-tight: 1.1;
+  --lh-heading: 1.15;
+  --lh-body: 1.55;
+
+  /* Layout */
+  --container-max: 87.5rem;
+  --container-pad: clamp(1rem, 0.5rem + 2vw, 2.5rem);
+
+  --radius-panel: 48px;
+  --radius-card: 16px;
+
+  /* Motion */
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --dur-fast: 0.2s;
+  --dur-base: 0.4s;
+}
+
+body {
+  font-family: var(--font-sans);
+  font-size: var(--fs-body);
+  line-height: var(--lh-body);
+  color: var(--color-text);
+  background-color: var(--color-bg);
+}
+
+h1,
+h2,
+h3 {
+  color: var(--color-heading);
+  font-weight: 600;
+  line-height: var(--lh-heading);
+  text-wrap: balance;
+}
+
+h1 {
+  font-size: var(--fs-h1);
+  line-height: var(--lh-tight);
+  letter-spacing: -0.02em;
+}
+
+h2 {
+  font-size: var(--fs-h2);
+  letter-spacing: -0.015em;
+}
+
+h3 {
+  font-size: var(--fs-h3);
+}
+
+p {
+  text-wrap: pretty;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
