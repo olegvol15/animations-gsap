@@ -1,0 +1,68 @@
+@use "../abstracts/mixins" as m;
+
+.steps {
+  position: relative;
+  z-index: 2;
+  padding-block: clamp(4rem, 3rem + 6vw, 9rem);
+  background: #fff;
+}
+
+.steps__title {
+  margin-bottom: clamp(2rem, 1.5rem + 3vw, 4rem);
+}
+
+.steps__list {
+  padding-bottom: 40svh;
+}
+
+.step {
+  display: grid;
+  gap: 1.5rem;
+  align-content: space-between;
+  min-height: min(70svh, 34rem);
+  padding: clamp(1.5rem, 1rem + 2vw, 2.75rem);
+  border-radius: clamp(20px, 2vw, 32px);
+  background: linear-gradient(135deg, #eeecfb 0%, #e4e1f7 100%);
+  overflow: hidden;
+
+  @include m.respond-to("md") {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    align-items: center;
+    gap: 2rem;
+  }
+}
+
+.step__body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1rem;
+  height: 100%;
+}
+
+.step__icon {
+  display: block;
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 50%;
+  background: #14121c;
+}
+
+.step__title {
+  margin-top: auto;
+}
+
+.step__text {
+  max-width: 28rem;
+}
+
+.step__media {
+  border-radius: clamp(12px, 1.5vw, 20px);
+  background: linear-gradient(160deg, #cfcbee 0%, #b7b1e4 100%);
+  aspect-ratio: 4 / 3;
+
+  @include m.respond-to("md") {
+    height: 100%;
+    aspect-ratio: auto;
+  }
+}

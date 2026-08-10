@@ -7,6 +7,7 @@ import { initHeader } from "./js/header";
 import { initHeroCover } from "./js/animations/hero";
 import { initCards } from "./js/animations/cards";
 import { initShowcase } from "./js/animations/showcase";
+import { initSteps } from "./js/animations/steps";
 
 gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 
@@ -21,3 +22,4 @@ initHeader();
 initHeroCover();
 initCards();
 initShowcase();
+initSteps();
