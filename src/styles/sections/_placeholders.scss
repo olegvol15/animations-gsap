@@ -1,0 +1,9 @@
+.intro {
+  display: flex;
+  align-items: center;
+  min-height: 70svh;
+  padding-block: var(--header-height) clamp(3rem, 2rem + 4vw, 6rem);
+  text-align: center;
+}
+
+

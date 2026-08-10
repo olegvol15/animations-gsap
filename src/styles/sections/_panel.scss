@@ -5,7 +5,8 @@
   --color-text: var(--color-on-dark-muted);
   position: relative;
   z-index: 1;
-  padding-block: clamp(3rem, 2rem + 4vw, 6rem) clamp(4rem, 3rem + 6vw, 9rem);
+  min-height: 100svh;
+  padding-block: var(--header-height) clamp(4rem, 3rem + 6vw, 9rem);
 }
 
 .panel__bg {
@@ -56,4 +57,46 @@
 
 .card__text {
   margin-top: 0.75rem;
+}
+
+.showcase {
+  position: relative;
+  margin-top: clamp(4rem, 3rem + 6vw, 9rem);
+}
+
+.showcase__frame {
+  position: relative;
+  z-index: 1;
+  max-width: 62rem;
+  margin-inline: auto;
+  aspect-ratio: 16 / 9;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: clamp(12px, 1.5vw, 24px);
+  background: linear-gradient(180deg, #ecebf3 0%, #d6d3e4 100%);
+  box-shadow: 0 40px 80px -30px rgba(0, 0, 0, 0.55);
+}
+
+.showcase__widget {
+  display: none;
+  position: absolute;
+  width: 22%;
+  aspect-ratio: 4 / 3;
+  border: 1px solid var(--color-border-on-dark);
+  border-radius: var(--radius-card);
+  background: rgba(255, 255, 255, 0.07);
+  backdrop-filter: blur(6px);
+
+  @include m.respond-to("md") {
+    display: block;
+  }
+}
+
+.showcase__widget--left {
+  top: 14%;
+  left: 0;
+}
+
+.showcase__widget--right {
+  top: 30%;
+  right: 0;
 }
