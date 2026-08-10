@@ -18,7 +18,7 @@
   --color-accent: #f2c14b;
 
   /* Type scale */
-  --fs-h1: clamp(1.75rem, 1rem + 3.4vw, 4rem);
+  --fs-h1: clamp(1.5rem, 1rem + 2vw, 2.5rem);
   --fs-h2: clamp(1.5rem, 0.9rem + 2.6vw, 3rem);
   --fs-h3: clamp(1.125rem, 0.95rem + 0.8vw, 1.5rem);
   --fs-body: clamp(0.9375rem, 0.88rem + 0.3vw, 1.125rem);
@@ -32,7 +32,7 @@
   --container-max: 87.5rem;
   --container-pad: clamp(1rem, 0.5rem + 2vw, 2.5rem);
 
-  --radius-panel: 48px;
+  --radius-panel: 32px;
   --radius-card: 16px;
 
   /* Motion */

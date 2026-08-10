@@ -1,9 +1,10 @@
-@use '../abstracts/mixins' as m;
+@use "../abstracts/mixins" as m;
 
 .panel {
   --color-heading: var(--color-on-dark);
   --color-text: var(--color-on-dark-muted);
   position: relative;
+  z-index: 1;
   padding-block: clamp(3rem, 2rem + 4vw, 6rem) clamp(4rem, 3rem + 6vw, 9rem);
 }
 
@@ -11,8 +12,12 @@
   position: absolute;
   inset: 0;
   z-index: 0;
-  background: linear-gradient(160deg, var(--color-panel-top), var(--color-panel-bottom));
-  clip-path: inset(0 12px 0 12px round var(--radius-panel) var(--radius-panel) 0 0);
+  background: linear-gradient(
+    160deg,
+    var(--color-panel-top),
+    var(--color-panel-bottom)
+  );
+  border-radius: var(--radius-panel);
 }
 
 .panel__inner {
@@ -29,11 +34,11 @@
   grid-template-columns: 1fr;
   gap: clamp(1.5rem, 1rem + 2.5vw, 4rem);
 
-  @include m.respond-to('md') {
+  @include m.respond-to("md") {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  @include m.respond-to('lg') {
+  @include m.respond-to("lg") {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 }
